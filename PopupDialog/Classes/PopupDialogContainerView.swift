@@ -93,7 +93,7 @@ public class PopupDialogContainerView: UIView {
     }()
 
     // The container stack view for buttons
-    lazy var buttonStackView: UIStackView = {
+    public lazy var buttonStackView: UIStackView = {
         let buttonStackView = UIStackView()
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         buttonStackView.distribution = .fillEqually
@@ -102,7 +102,7 @@ public class PopupDialogContainerView: UIView {
     }()
 
     // The main stack view, containing all relevant views
-    lazy var stackView: UIStackView = {
+    public lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [self.buttonStackView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
