@@ -27,7 +27,7 @@ import Foundation
 import UIKit
 
 /// Creates a Popup dialog similar to UIAlertController
-open public class PopupDialog: UIViewController {
+open class PopupDialog: UIViewController {
 
     // MARK: Private / Internal
 
@@ -182,11 +182,11 @@ open public class PopupDialog: UIViewController {
     // MARK: - View life cycle
 
     /// Replaces controller view with popup view
-    public override func loadView() {
+    open override func loadView() {
         view = PopupDialogContainerView(frame: UIScreen.main.bounds, preferredWidth: preferredWidth)
     }
 
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addObservers()
 
@@ -195,7 +195,7 @@ open public class PopupDialog: UIViewController {
         initialized = true
     }
     
-    public override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         statusBarShouldBeHidden = hideStatusBar
@@ -204,7 +204,7 @@ open public class PopupDialog: UIViewController {
         }
     }
 
-    public override func viewWillDisappear(_ animated: Bool) {
+    open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         removeObservers()
     }
@@ -292,11 +292,11 @@ open public class PopupDialog: UIViewController {
     
     // MARK: - StatusBar display related
     
-    public override var prefersStatusBarHidden: Bool {
+    open override var prefersStatusBarHidden: Bool {
         return statusBarShouldBeHidden
     }
     
-    public override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+    open override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return .slide
     }
 }
