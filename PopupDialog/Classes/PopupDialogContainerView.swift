@@ -28,7 +28,7 @@ import Foundation
 import UIKit
 
 /// The main view of the popup dialog
-final public class PopupDialogContainerView: UIView {
+public class PopupDialogContainerView: UIView {
 
     // MARK: - Appearance
 
