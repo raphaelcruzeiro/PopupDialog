@@ -27,7 +27,7 @@ import Foundation
 import UIKit
 
 /// Creates a Popup dialog similar to UIAlertController
-public class PopupDialog: UIViewController {
+open public class PopupDialog: UIViewController {
 
     // MARK: Private / Internal
 
@@ -51,7 +51,7 @@ public class PopupDialog: UIViewController {
     fileprivate lazy var interactor = InteractiveTransition()
 
     /// Returns the controllers view
-    internal var popupContainerView: PopupDialogContainerView {
+    var popupContainerView: PopupDialogContainerView {
         return view as! PopupDialogContainerView // swiftlint:disable:this force_cast
     }
 
